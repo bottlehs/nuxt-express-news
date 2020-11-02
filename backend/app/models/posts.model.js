@@ -26,6 +26,12 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.TEXT,
       allowNull: false,
     },
+    // 오디오
+    audio: {
+      type: Sequelize.STRING(100),      
+      type: Sequelize.TEXT,
+      allowNull: false,
+    },
     // 태그  
     tag: {
       type: Sequelize.TEXT,

@@ -33,6 +33,8 @@ module.exports = (app) => {
    *         type: number
    *       content:
    *         type: string
+   *       status:
+   *         type: string
    *       type:
    *         type: string
    *       ipAddress:

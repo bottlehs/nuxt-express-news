@@ -14,6 +14,7 @@ module.exports = (app) => {
    *       - content
    *       - summary
    *       - thumbnail
+   *       - audio
    *       - tag
    *     properties:
    *       title:
@@ -23,6 +24,8 @@ module.exports = (app) => {
    *       summary:
    *         type: string
    *       thumbnail:
+   *         type: string
+   *       audio:
    *         type: string
    *       tag:
    *         type: string
@@ -38,6 +41,8 @@ module.exports = (app) => {
    *       content:
    *         type: string
    *       summary:
+   *         type: string
+   *       audio:
    *         type: string
    *       thumbnail:
    *         type: string

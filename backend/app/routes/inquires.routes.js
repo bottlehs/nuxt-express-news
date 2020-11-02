@@ -10,9 +10,12 @@ module.exports = (app) => {
    *   Inquire:
    *     type: object
    *     required:
+   *       - title
    *       - question
    *       - answer
    *     properties:
+   *       title:
+   *         type: string
    *       question:
    *         type: string
    *       answer:
@@ -24,6 +27,8 @@ module.exports = (app) => {
    *         type: number
    *       usersId:
    *         type: number
+   *       title:
+   *         type: string
    *       question:
    *         type: string
    *       answer:
