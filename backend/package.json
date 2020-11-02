@@ -1,7 +1,7 @@
 {
-  "name": "vue-express-ecommerce",
+  "name": "nuxt-express-news",
   "version": "1.0.0",
-  "description": "vue-express-ecommerce",
+  "description": "nuxt-express-news",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
