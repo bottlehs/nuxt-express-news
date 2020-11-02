@@ -12,10 +12,19 @@ module.exports = (app) => {
    *     required:
    *       - title
    *       - content
+   *       - summary
+   *       - thumbnail
+   *       - tag
    *     properties:
    *       title:
    *         type: string
    *       content:
+   *         type: string
+   *       summary:
+   *         type: string
+   *       thumbnail:
+   *         type: string
+   *       tag:
    *         type: string
    *   ResPost:
    *     type: object
@@ -27,6 +36,12 @@ module.exports = (app) => {
    *       title:
    *         type: string
    *       content:
+   *         type: string
+   *       summary:
+   *         type: string
+   *       thumbnail:
+   *         type: string
+   *       tag:
    *         type: string
    *       status:
    *         type: string

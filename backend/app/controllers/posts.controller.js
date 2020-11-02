@@ -25,6 +25,9 @@ exports.create = (req, res, next) => {
     usersId: req.user.id,
     title: req.body.title,
     content: req.body.content,
+    summary: req.body.summary,    
+    thumbnail: req.body.thumbnail,    
+    tag: req.body.tag,
     ipAddress: req.headers["x-forwarded-for"] || req.connection.remoteAddress,
   };
 
