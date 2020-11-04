@@ -59,3 +59,19 @@ exports.create = (req, res) => {
       });
     });
 };
+
+// Find a single User with an id
+exports.findOne = (req, res) => {
+  console.log(req);
+  const id = req.user.id;
+
+  User.findByPk(id)
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Error retrieving User with id=" + id,
+      });
+    });
+};

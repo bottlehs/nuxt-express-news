@@ -43,6 +43,7 @@
     </v-app-bar>
     <v-main>
       <v-container>
+        {{ isAuthenticated ? 'login' : 'no login' }}
         <nuxt />
       </v-container>
     </v-main>
@@ -63,6 +64,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data() {
     return {
@@ -86,6 +89,10 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js',
     }
+  },
+
+  computed: {
+    ...mapGetters(['isAuthenticated', 'loggedInUser']),
   },
 }
 </script>

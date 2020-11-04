@@ -8,6 +8,8 @@
 export default {
   layout: 'dashboard',
 
+  middleware: 'auth',
+
   components: {},
 
   props: {},

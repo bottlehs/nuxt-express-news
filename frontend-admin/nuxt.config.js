@@ -43,6 +43,8 @@ export default {
     '@nuxt/content',
     // https://i18n.nuxtjs.org/
     'nuxt-i18n',
+    // https://auth.nuxtjs.org/
+    '@nuxtjs/auth',
   ],
 
   // i18m global options
@@ -70,7 +72,26 @@ export default {
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:8081',
+  },
+
+  // Auth module configuration (https://auth.nuxtjs.org/#getting-started)
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/api/oauth/login',
+            method: 'post',
+            propertyName: 'token',
+          },
+          user: { url: '/api/oauth/me', method: 'get', propertyName: 'id' },
+          logout: false,
+        },
+      },
+    },
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},

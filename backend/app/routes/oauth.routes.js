@@ -17,12 +17,58 @@ module.exports = (app) => {
    *         type: string
    *       password:
    *         type: string
+   *   User:
+   *     type: object
+   *     required:
+   *       - email
+   *       - password
+   *       - username
+   *       - firstname
+   *       - lastname
+   *       - languege
+   *       - country
+   *     properties:
+   *       email:
+   *         type: string
+   *       password:
+   *         type: string
+   *       username:
+   *         type: string
+   *       firstname:
+   *         type: string
+   *       lastname:
+   *         type: string
+   *       languege:
+   *         type: string
+   *       country:
+   *         type: string
    *   ResOauth:
    *     type: object
    *     properties:
    *       token:
    *         type: string
    *       refreshToken:
+   *         type: string
+   *   ResUser:
+   *     type: object
+   *     properties:
+   *       id:
+   *         type: number
+   *       email:
+   *         type: string
+   *       username:
+   *         type: string
+   *       firstname:
+   *         type: string
+   *       lastname:
+   *         type: string
+   *       languege:
+   *         type: string
+   *       country:
+   *         type: string
+   *       createdAt:
+   *         type: string
+   *       updateAt:
    *         type: string
    */
 
@@ -35,7 +81,7 @@ module.exports = (app) => {
 
   /**
    * @swagger
-   * /api/oauth/token:
+   * /api/oauth/login:
    *   post:
    *     summary: AccessToken 발급
    *     description: AccessToken 발급
@@ -70,7 +116,54 @@ module.exports = (app) => {
    *         $ref: '#/components/res/InternalServerError'
    */
 
-  router.post("/token", oauth.create);
+  router.post("/login", oauth.create);
+
+  /**
+   * @swagger
+   * /api/oauth/me:
+   *   get:
+   *     summary: Token 회원 조회
+   *     description: Token 회원 조회
+   *     tags: [Oauth]
+   *     produces:
+   *       - application/json
+   *     parameters:
+   *       - name: email
+   *         description: email
+   *         in: query
+   *       - name: page
+   *         description: page
+   *         in: query
+   *       - name: size
+   *         description: size
+   *         in: query
+   *     responses:
+   *       200:
+   *         description: OK
+   *         schema:
+   *           type: array
+   *           items:
+   *             $ref: '#/definitions/ResUser'
+   *       201:
+   *         $ref: '#/components/res/Created'
+   *       204:
+   *         $ref: '#/components/res/NoContent'
+   *       400:
+   *         $ref: '#/components/res/BadRequest'
+   *       401:
+   *         $ref: '#/components/res/Unauthorized'
+   *       404:
+   *         $ref: '#/components/res/NotFound'
+   *       409:
+   *         $ref: '#/components/res/Conflict'
+   *       500:
+   *         $ref: '#/components/res/InternalServerError'
+   */
+  router.get(
+    "/me",
+    passport.authenticate("jwt", { session: false }),
+    oauth.findOne
+  );
 
   app.use("/api/oauth", router);
 };
