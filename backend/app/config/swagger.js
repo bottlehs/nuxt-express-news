@@ -15,7 +15,7 @@ const options = {
     },
 
     contact: {
-      email: "dataguru_kr@nextinnovation.kr",
+      email: "qudgns9@gmail.com",
     },
     basePath: "/",
     // Like the one described here: https://swagger.io/specification/#infoObject

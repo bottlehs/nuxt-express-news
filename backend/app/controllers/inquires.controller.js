@@ -1,4 +1,3 @@
-
 const db = require("../models");
 const Inquire = db.inquires;
 const Op = db.Sequelize.Op;

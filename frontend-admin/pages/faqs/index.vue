@@ -6,6 +6,47 @@
 
 <script>
 export default {
+  layout: 'dashboard',
+
   components: {},
+
+  props: {},
+
+  data() {
+    return {
+      pagenation: {
+        totalItems: 0,
+        items: [],
+        totalPages: 0,
+        currentPage: 0,
+        wait: false,
+      },
+    }
+  },
+
+  computed: {},
+
+  watch: {},
+
+  created() {},
+
+  mounted() {},
+
+  updated() {},
+
+  destroyed() {},
+
+  head() {
+    return {
+      title: 'title',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description',
+        },
+      ],
+    }
+  },
 }
 </script>

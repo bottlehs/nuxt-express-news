@@ -15,7 +15,7 @@
   "keywords": [
     "node.js"
   ],
-  "author": "nextinnovation labs",
+  "author": "bottlehs labs",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",

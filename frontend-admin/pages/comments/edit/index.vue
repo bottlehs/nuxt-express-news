@@ -6,6 +6,39 @@
 
 <script>
 export default {
+  layout: 'dashboard',
+
   components: {},
+
+  props: {},
+
+  data() {
+    return {}
+  },
+
+  computed: {},
+
+  watch: {},
+
+  created() {},
+
+  mounted() {},
+
+  updated() {},
+
+  destroyed() {},
+
+  head() {
+    return {
+      title: 'title',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description',
+        },
+      ],
+    }
+  },
 }
 </script>
