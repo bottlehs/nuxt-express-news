@@ -2,7 +2,7 @@ import http from '@/common/http'
 import authHeader from './auth.header'
 const SERVICE_API_URL = '/api/posts'
 
-class UsersService {
+class PostsService {
   findOne(id = 0) {
     return http.get(SERVICE_API_URL + '/' + id, {
       headers: authHeader(),
@@ -44,4 +44,4 @@ class UsersService {
   }
 }
 
-export default new UsersService()
+export default new PostsService()
