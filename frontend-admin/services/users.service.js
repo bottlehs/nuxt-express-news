@@ -1,6 +1,6 @@
 import http from '@/common/http'
 import authHeader from './auth.header'
-const SERVICE_API_URL = '/user/'
+const SERVICE_API_URL = '/api/users'
 
 class UsersService {
   findOne(id = 0) {
