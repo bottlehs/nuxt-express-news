@@ -23,6 +23,7 @@ export default {
       },
     }
   },
+  fetchOnServer: false,
 
   computed: {},
 
@@ -35,6 +36,8 @@ export default {
   updated() {},
 
   destroyed() {},
+
+  methods: {},
 
   head() {
     return {

@@ -28,6 +28,8 @@ export default {
 
   destroyed() {},
 
+  methods: {},
+
   head() {
     return {
       title: 'title',
