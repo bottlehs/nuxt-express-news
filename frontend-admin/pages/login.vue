@@ -28,14 +28,9 @@
       </div>
 
       <div class="control">
-        <button type="submit" class="button is-dark is-fullwidth">
-          Register
-        </button>
+        <button type="submit" class="button is-dark is-fullwidth">Login</button>
       </div>
     </form>
-    <div class="has-text-centered" style="margin-top: 20px">
-      Already got an account? <nuxt-link to="/login">Login</nuxt-link>
-    </div>
     <button @click.prevent="logout">logout</button>
   </v-row>
 </template>
@@ -43,6 +38,8 @@
 <script>
 export default {
   layout: 'dashboard',
+
+  middleware: 'guest',
 
   components: {},
 

@@ -13,3 +13,51 @@
     </v-col>
   </v-row>
 </template>
+
+<script>
+export default {
+  layout: 'dashboard',
+
+  middleware: 'guest',
+
+  components: {},
+
+  props: {},
+
+  data() {
+    return {
+      form: {
+        email: '',
+        password: '',
+      },
+    }
+  },
+
+  computed: {},
+
+  watch: {},
+
+  created() {},
+
+  mounted() {},
+
+  updated() {},
+
+  destroyed() {},
+
+  methods: {},
+
+  head() {
+    return {
+      title: 'title',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description',
+        },
+      ],
+    }
+  },
+}
+</script>

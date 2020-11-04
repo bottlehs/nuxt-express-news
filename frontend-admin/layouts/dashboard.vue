@@ -74,14 +74,29 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
+          icon: 'mdi-account',
+          title: this.$t('nav_users'),
+          to: '/users',
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
+          icon: 'mdi-format-list-text',
+          title: this.$t('nav_posts'),
+          to: '/posts',
+        },
+        {
+          icon: 'mdi-comment',
+          title: this.$t('nav_comments'),
+          to: '/comments',
+        },
+        {
+          icon: 'mdi-comment-account',
+          title: this.$t('nav_inquires'),
+          to: '/inquires',
+        },
+        {
+          icon: 'mdi-frequently-asked-questions',
+          title: this.$t('nav_faqs'),
+          to: '/faqs',
         },
       ],
       miniVariant: false,
