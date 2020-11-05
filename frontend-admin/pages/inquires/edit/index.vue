@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import InquiresService from '@/services/inquires.service.js'
+
 export default {
   layout: 'dashboard',
 
@@ -14,15 +16,41 @@ export default {
 
   props: {},
 
+  fetch(context) {
+    console.log(context + 'page fetch')
+  },
+
+  asyncData(context) {
+    console.log(context + 'page asyncData')
+  },
+
   data() {
-    return {}
+    return {
+      pagenation: {
+        totalItems: 0,
+        items: [],
+        totalPages: 0,
+        currentPage: 0,
+        wait: false,
+      },
+    }
+  },
+  fetchOnServer: false,
+
+  validate(context) {
+    console.log(context + 'page validate')
+    return true
   },
 
   computed: {},
 
   watch: {},
 
+  beforeCreate() {},
+
   created() {},
+
+  beforeMount() {},
 
   mounted() {},
 
@@ -30,7 +58,11 @@ export default {
 
   destroyed() {},
 
-  methods: {},
+  methods: {
+    submit() {
+      console.log(InquiresService)
+    },
+  },
 
   head() {
     return {
