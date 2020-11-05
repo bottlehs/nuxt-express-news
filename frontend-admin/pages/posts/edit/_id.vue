@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import PostsService from '@/services/posts.service.js'
+
 export default {
   layout: 'dashboard',
 
@@ -14,17 +16,38 @@ export default {
 
   props: {},
 
+  fetch(context) {
+    console.log(context + 'page fetch')
+  },
+
+  asyncData(context) {
+    console.log(context + 'page asyncData')
+  },
+
   data() {
     return {
       id: this.$route.params.id,
+      wait: false,
     }
+  },
+  fetchOnServer: false,
+
+  validate(context) {
+    console.log(context + 'page validate')
+    return true
   },
 
   computed: {},
 
   watch: {},
 
+  beforeCreate() {},
+
   created() {},
+
+  beforeMount() {
+    this.fetch()
+  },
 
   mounted() {},
 
@@ -32,7 +55,27 @@ export default {
 
   destroyed() {},
 
-  methods: {},
+  methods: {
+    fetch() {
+      if (!this.wait) {
+        this.wait = true
+
+        PostsService.findOne(this.$axios, this.id).then(
+          (response) => {
+            const { data } = response
+            console.log(data)
+
+            this.wait = false
+          },
+          (error) => {
+            console.log(error)
+
+            this.wait = false
+          }
+        )
+      }
+    },
+  },
 
   head() {
     return {
