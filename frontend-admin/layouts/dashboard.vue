@@ -75,27 +75,27 @@ export default {
       items: [
         {
           icon: 'mdi-account',
-          title: this.$t('nav_users'),
+          title: this.$t('menu_users'),
           to: '/users',
         },
         {
           icon: 'mdi-format-list-text',
-          title: this.$t('nav_posts'),
+          title: this.$t('menu_posts'),
           to: '/posts',
         },
         {
           icon: 'mdi-comment',
-          title: this.$t('nav_comments'),
+          title: this.$t('menu_comments'),
           to: '/comments',
         },
         {
           icon: 'mdi-comment-account',
-          title: this.$t('nav_inquires'),
+          title: this.$t('menu_inquires'),
           to: '/inquires',
         },
         {
           icon: 'mdi-frequently-asked-questions',
-          title: this.$t('nav_faqs'),
+          title: this.$t('menu_faqs'),
           to: '/faqs',
         },
       ],
