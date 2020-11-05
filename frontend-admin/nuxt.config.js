@@ -51,6 +51,10 @@ export default {
   i18n: {
     locales: [
       {
+        code: 'ko',
+        file: 'ko-KR.js',
+      },
+      {
         code: 'en',
         file: 'en-US.js',
       },
@@ -65,9 +69,9 @@ export default {
     ],
     lazy: true,
     langDir: 'lang/',
-    defaultLocale: 'en',
+    defaultLocale: 'ko',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'ko',
     },
   },
 
