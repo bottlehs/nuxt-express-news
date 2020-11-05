@@ -1,9 +1,9 @@
 export default {
   welcome: 'Welcome',
 
-  nav_users: 'User',
-  nav_posts: 'Post',
-  nav_comments: 'Comment',
-  nav_inquires: 'Q&A',
-  nav_faqs: 'FAQ',
+  menu_users: 'User',
+  menu_posts: 'Post',
+  menu_comments: 'Comment',
+  menu_inquires: 'Q&A',
+  menu_faqs: 'FAQ',
 }
