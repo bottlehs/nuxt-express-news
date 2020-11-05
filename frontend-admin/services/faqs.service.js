@@ -1,45 +1,35 @@
-import http from '@/common/http'
-import authHeader from './auth.header'
 const SERVICE_API_URL = '/api/faqs'
 
 class FaqsService {
-  findOne(id = 0) {
-    return http.get(SERVICE_API_URL + '/' + id, {
-      headers: authHeader(),
-    })
+  findOne(http, id = 0) {
+    return http.get(SERVICE_API_URL + '/' + id, {})
   }
 
-  findAll(params = {}) {
+  findAll(http, params = {}) {
     return http.get(SERVICE_API_URL + '/', {
       params,
-      headers: authHeader(),
     })
   }
 
-  create(params = {}) {
+  create(http, params = {}) {
     return http.post(SERVICE_API_URL + '/', {
       params,
-      headers: authHeader(),
     })
   }
 
-  update(id = 0, params = {}) {
+  update(http, id = 0, params = {}) {
     return http.put(SERVICE_API_URL + '/' + id, {
       params,
-      headers: authHeader(),
     })
   }
 
-  delete(id = 0) {
-    return http.delete(SERVICE_API_URL + '/' + id, {
-      headers: authHeader(),
-    })
+  delete(http, id = 0) {
+    return http.delete(SERVICE_API_URL + '/' + id, {})
   }
 
-  deleteAll(params = {}) {
+  deleteAll(http, params = {}) {
     return http.delete(SERVICE_API_URL + '/', {
       params,
-      headers: authHeader(),
     })
   }
 }
